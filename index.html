@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<title>XURRKA.COM</title>
+<link rel="icon" type=image/jpg href="X.png">
+
+<style>
+
+body {
+  font-family: Arial;
+  background-image: url('webback.jpg');
+  margin: 100;
+  padding: 0;
+  margin-top: 70px;
+  cursor: url('cursor.cur'), auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes moveText {
+        from { left: 0; color:rgb(0, 0, 0); } /* Starting position */
+        to { left: calc(100% - 100px); } /* Ending position */
+    }
+
+    .moving-text {
+        position: absolute;
+        top: 50%; /* Adjust the vertical position */
+        left: 0; /* Starting position */
+        white-space: nowrap; /* Prevent text from wrapping */
+        animation: moveText 10s linear infinite; /* Animation duration and timing */
+    }
+
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner {
+  position: absolute;
+  max-width: 1000px;
+  margin-right: -576px; 
+  margin-top: -317px;
+  height: 400px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  size-adjust: 260px;
+  margin-left: 0px;
+  margin-bottom: -175px;
+  margin-top:  110px;
+}
+
+.link {
+  margin: 5px 0;
+}
+
+.link a {
+  text-decoration: none;
+  color: rgb(32, 30, 32);
+  display:auto;
+  font-size: 26px;
+  margin-bottom: 60px;
+  justify-content: center;
+  cursor: pointer; 
+}
+
+.link a:hover {
+  color: rgb(33, 248, 201);
+}
+
+.link i {
+  font-size: 45px;
+  margin-right: 99px;
+}
+
+.link a::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.mute-button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.mute-button i {
+  font-size: 20px;
+  color: rgb(202, 219, 213);
+}
+
+#side-image {
+  position: absolute;
+  top: 50%;
+  right: 620px;
+  transform: translateY(-50%);
+  max-width: 150px;
+  height: auto;
+}
+
+.gif {
+  width: 50%;
+  max-width: 200px;
+  height: auto;
+  margin-right: -30px;
+  margin-bottom: 400px;
+  position: absolute;
+  top: 11%;
+  transform: translateY(-50%);
+}
+</style>
+</head>
+<body>
+<audio autoplay loop id="bg-music">
+  <source src="xkadtcm.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<div class="moving-text">xurrka.com</div>
+<div class="container">
+  <img src="banner.gif" alt="banner" class="banner">
+  <div class="links">
+  </div>
+  <div class="link">
+      <a href="https://www.instagram.com/xurrrka"><i class="fab fa-instagram"></i>Instagram</a>
+    </div>
+    
+    <div class="link">
+      <a href="https://discord.gg/xurrka"><i class="fab fa-discord"></i>Discord</a>
+   </div>
+  </div>
+    <div class="link">
+      <a href="https://open.spotify.com/artist/084eUnnhGS6DLIpYRCb7V9"><i class="fab fa-spotify"></i>Spotify</a>
+    </div>
+
+    <div class="link">
+      <a href="https://soundcloud.com/xurrka"><i class="fab fa-soundcloud"></i>Soundcloud</a>
+    </div>
+    
+    <div class="link">
+      <a href="https://traktrain.com/xka"><i class="fas fa-map-marker-alt"></i>Traktrain</a>
+    </div>
+    
+   
+    
+    <div class="link">
+      <a href="https://beatstars.com/xurrka"><i class="fab fa-behance-square"></i>Beatstars</a>
+    
+  </div>
+  
+ 
+<div class="mute-button" onclick="toggleMute()">
+  <i id="volumeIcon" class="fas fa-volume-up"></i> 
+</div>
+
+<script>
+  function toggleMute() {
+    var music = document.getElementById("bg-music");
+    var volumeIcon = document.getElementById("volumeIcon");
+
+    if (music.muted) {
+      music.muted = false; 
+      volumeIcon.classList.remove("fa-volume-off"); 
+      volumeIcon.classList.add("fa-volume-up"); 
+    } else {
+      music.muted = true; 
+      volumeIcon.classList.remove("fa-volume-up");
+      volumeIcon.classList.add("fa-volume-off"); 
+    }
+  }
+</script>
+
+</body>
+</html>
